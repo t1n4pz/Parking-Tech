@@ -1,6 +1,15 @@
 -- PostgreSQL 17 version
 
 
+-- Tabla Vehiculo
+CREATE TABLE Vehiculo (
+  idVehiculo SERIAL NOT NULL,
+  tipo VARCHAR(30),
+  placa VarCHAR (10);
+  imagen bytea,
+  PRIMARY KEY (idVehiculo)
+);
+
 -- Tabla de Usuarios
 CREATE TABLE Usuario (
   idUsuario SERIAL NOT NULL,
@@ -9,17 +18,8 @@ CREATE TABLE Usuario (
   cedula INTEGER NOT NULL,
   clave VARCHAR(30) NOT NULL,
   idVehiculo INTEGER NOT NULL,
-  PRIMARY KEY (idUsuario)
-  FOREIGN KEY (idVehiculo)
-);
-
--- Tabla Vehiculo
-CREATE TABLE Vehiculo (
-  idVehiculo SERIAL NOT NULL,
-  tipo VARCHAR(30),
-  placa VarCHAR (10);
-  imagen bytea,
-  PRIMARY KEY (idVehiculo)
+  PRIMARY KEY (idUsuario),
+  FOREIGN KEY (idVehiculo) REFERENCES Vehiculo(idVehiculo)
 );
 
 -- Tabla Reserva
@@ -30,8 +30,8 @@ CREATE TABLE Reserva (
   idUsuario;
   idCelda;
   PRIMARY KEY (idReserva)
-  FOREIGN KEY (idUsuario)
-  FOREIGN KEY (idCelda)
+  FOREIGN KEY (idUsuario) REFERENCES Usuario(idUsuario)
+  FOREIGN KEY (idCelda) REFERENCES Celda(idCelda)
 );
 
 -- Tabla Celda
