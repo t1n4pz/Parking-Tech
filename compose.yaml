@@ -2,7 +2,7 @@
 # docker compose  up -d 
 # docker build -t my-image .
 # docker run --name my-app -e DB_PASSWORD=example \
-#  -e DB_HOST=192.168.33.11 -e DB_PORT=5433 my-image
+#  -e DB_HOST=172.21.176.1 -e DB_PORT=5433 my-image
 
 services:
 
@@ -22,7 +22,7 @@ services:
     environment:
       POSTGRES_PASSWORD: example
     ports:
-      - 5433:5432
+      - 5435:5432
 
   adminer:
     image: adminer

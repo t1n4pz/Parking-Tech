@@ -3,19 +3,19 @@
 
 -- Tabla de Usuarios
 CREATE TABLE Usuario (
-  idUsuario INTEGER NOT NULL,
+  idUsuario SERIAL NOT NULL,
   nombre VARCHAR(30) NOT NULL,
   apellido VARCHAR(30) NOT NULL,
   cedula INTEGER NOT NULL,
   clave VARCHAR(30) NOT NULL,
   idVehiculo INTEGER NOT NULL,
   PRIMARY KEY (idUsuario)
-  FOREIGN KEY (idVehivulo)
+  FOREIGN KEY (idVehiculo)
 );
 
 -- Tabla Vehiculo
 CREATE TABLE Vehiculo (
-  idVehiculo INTEGER NOT NULL,
+  idVehiculo SERIAL NOT NULL,
   tipo VARCHAR(30),
   placa VarCHAR (10);
   imagen bytea,
@@ -24,9 +24,9 @@ CREATE TABLE Vehiculo (
 
 -- Tabla Reserva
 CREATE TABLE Reserva (
-  idReserva INTEGER NOT NULL,
-  Inicio TIMESTAMP(),
-  Final TIMESTAMP(),
+  idReserva SERIAL NOT NULL,
+  Inicio TIMESTAMP()[without time zone],
+  Final TIMESTAMP()[without time zone],
   idUsuario;
   idCelda;
   PRIMARY KEY (idReserva)
@@ -36,7 +36,7 @@ CREATE TABLE Reserva (
 
 -- Tabla Celda
 CREATE TABLE Celda (
-  idCelda INTEGER NOT NULL,
+  idCelda SERIAL NOT NULL,
   Zona VARCHAR(10);
   PRIMARY KEY (idCelda)
 );
