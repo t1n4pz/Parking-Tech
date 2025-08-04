@@ -6,7 +6,6 @@ CREATE TABLE Vehiculo (
   idVehiculo SERIAL NOT NULL,
   tipo VARCHAR(30),
   placa VarCHAR (10);
-  imagen bytea,
   PRIMARY KEY (idVehiculo)
 );
 
@@ -25,8 +24,8 @@ CREATE TABLE Usuario (
 -- Tabla Reserva
 CREATE TABLE Reserva (
   idReserva SERIAL NOT NULL,
-  Inicio TIMESTAMP()[without time zone],
-  Final TIMESTAMP()[without time zone],
+  Inicio TIMESTAMP(),
+  Final TIMESTAMP(),
   idUsuario;
   idCelda;
   PRIMARY KEY (idReserva)
