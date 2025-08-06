@@ -27,7 +27,7 @@
 		<url/>
 	</scm>
 	<properties>
-		<java.version>21</java.version>
+		<java.version>17</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -47,7 +47,11 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-
+	<dependency>
+		<groupId>jakarta.persistence</groupId>
+		<artifactId>jakarta.persistence-api</artifactId>
+		<version>3.1.0</version>
+	</dependency>
 	<build>
 		<plugins>
 			<plugin>
