@@ -1,6 +1,6 @@
-package main.co.edu.udea.talentotech.parkingtech.backendparkingtech.services;
+package co.edu.udea.talentotech.parkingtech.backendparkingtech.services;
 
-import main.co.edu.udea.talentotech.parkingtech.backendparkingtech.repositories.UsuarioRepository;
+import co.edu.udea.talentotech.parkingtech.backendparkingtech.repositories.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,4 +1,4 @@
-package main.co.edu.udea.talentotech.parkingtech.backendparkingtech.entities;
+package co.edu.udea.talentotech.parkingtech.backendparkingtech.entities;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Size;

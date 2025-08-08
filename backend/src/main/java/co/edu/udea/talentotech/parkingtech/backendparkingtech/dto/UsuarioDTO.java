@@ -1,8 +1,8 @@
-package main.co.edu.udea.talentotech.parkingtech.backendparkingtech.dto;
+package co.edu.udea.talentotech.parkingtech.backendparkingtech.dto;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
-import main.co.edu.udea.talentotech.parkingtech.backendparkingtech.entities.Usuario;
+import co.edu.udea.talentotech.parkingtech.backendparkingtech.entities.Usuario;
 
 public class UsuarioDTO {
     

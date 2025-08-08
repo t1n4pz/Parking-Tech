@@ -1,4 +1,4 @@
-package main.co.edu.udea.talentotech.parkingtech.backendparkingtech.controllers;
+package co.edu.udea.talentotech.parkingtech.backendparkingtech.controllers;
 
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Optional;
 
-import main.co.edu.udea.talentotech.parkingtech.backendparkingtech.dto.UsuarioDTO;
-import main.co.edu.udea.talentotech.parkingtech.backendparkingtech.services.UsuarioService;
+import co.edu.udea.talentotech.parkingtech.backendparkingtech.dto.UsuarioDTO;
+import co.edu.udea.talentotech.parkingtech.backendparkingtech.services.UsuarioService;
 
 @RestController
 @RequestMapping("/api/usuarios")

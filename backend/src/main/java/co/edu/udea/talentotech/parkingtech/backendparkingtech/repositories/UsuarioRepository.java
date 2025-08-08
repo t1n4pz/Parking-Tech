@@ -1,4 +1,4 @@
-package main.co.edu.udea.talentotech.parkingtech.backendparkingtech.repositories;
+package co.edu.udea.talentotech.parkingtech.backendparkingtech.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 import java.util.Optional;
 
-import main.co.edu.udea.talentotech.parkingtech.backendparkingtech.entities.Usuario;
+import co.edu.udea.talentotech.parkingtech.backendparkingtech.entities.Usuario;
 
 public interface UsuarioRepository extends JpaRepository<Usuario, Integer> {
     
