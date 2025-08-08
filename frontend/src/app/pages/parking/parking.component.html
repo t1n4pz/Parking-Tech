@@ -1,0 +1,31 @@
+<app-navbar></app-navbar>
+
+<div class="parking-container">
+  <h2>Alquiler de Parqueadero</h2>
+
+  <div class="form-section">
+    <input type="text" placeholder="Placa del vehículo" [(ngModel)]="placa">
+    <button (click)="registrarEntrada()">Registrar Entrada</button>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Placa</th>
+        <th>Hora de Entrada</th>
+        <th>Hora de Salida</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let alquiler of alquileres; let i = index">
+        <td>{{ alquiler.placa }}</td>
+        <td>{{ alquiler.horaEntrada }}</td>
+        <td>{{ alquiler.horaSalida || '—' }}</td>
+        <td>
+          <button *ngIf="!alquiler.horaSalida" (click)="registrarSalida(i)">Registrar Salida</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

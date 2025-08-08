@@ -1,0 +1,42 @@
+<div class="form-container">
+  <h2>📝 Registro</h2>
+
+  <form (ngSubmit)="register()">
+    <div class="form-group">
+      <label>Nombre</label>
+      <input type="text" [(ngModel)]="nombre" name="nombre" required />
+    </div>
+
+    <div class="form-group">
+      <label>Cédula</label>
+      <input type="text" [(ngModel)]="cedula" name="cedula" required />
+    </div>
+
+    <div class="form-group">
+      <label>Email</label>
+      <input type="email" [(ngModel)]="email" name="email" required />
+    </div>
+
+    <div class="form-group">
+      <label>Tipo de Vehículo</label>
+      <input type="text" [(ngModel)]="tipoVehiculo" name="tipoVehiculo" required />
+    </div>
+
+    <div class="form-group">
+      <label>Placa</label>
+      <input type="text" [(ngModel)]="placa" name="placa" required />
+    </div>
+
+    <div class="form-group">
+      <label>Contraseña</label>
+      <input type="password" [(ngModel)]="password" name="password" required />
+    </div>
+
+    <button type="submit">Registrarse</button>
+
+    <p class="switch-text">
+      ¿Ya tienes cuenta?
+      <a routerLink="/login">Inicia sesión aquí</a>
+    </p>
+  </form>
+</div>

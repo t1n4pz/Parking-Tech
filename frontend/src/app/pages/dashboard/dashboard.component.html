@@ -1,0 +1,60 @@
+<div class="dashboard-container" *ngIf="user">
+  <h2 class="titulo-bienvenida">Hola, {{ user.nombre }} 👋</h2>
+
+  <!-- Perfil -->
+  <div class="card perfil-card">
+    <h3>Mi Perfil</h3>
+    <p><strong>Cédula:</strong> {{ user.cedula }}</p>
+    <p><strong>Vehículo:</strong> {{ user.tipoVehiculo }} - {{ user.placa }}</p>
+    <p><strong>Email:</strong> {{ user.email }}</p>
+    <p *ngIf="esAdmin" class="admin-badge">🛡️ Administrador</p>
+  </div>
+
+  <!-- Formulario -->
+  <div class="card form-card">
+    <h3>{{ editando !== null ? 'Editar reserva' : 'Nueva reserva' }}</h3>
+    <form (ngSubmit)="reservar()" class="reserva-form">
+      <label>📅 Fecha:</label>
+      <input type="date" [(ngModel)]="nuevaReserva.fecha" name="fecha" required>
+
+      <label>⏰ Hora:</label>
+      <input type="time" [(ngModel)]="nuevaReserva.hora" name="hora" required>
+
+      <<label>📍 Lugar:</label>
+<select [(ngModel)]="nuevaReserva.lugar" name="lugar" required>
+  <option value="" disabled selected>Selecciona un parqueadero</option>
+  <option value="Parqueadero Norte">Parqueadero Norte</option>
+  <option value="Parqueadero Sur">Parqueadero Sur</option>
+  <option value="Parqueadero Este">Parqueadero Este</option>
+  <option value="Parqueadero Oeste">Parqueadero Oeste</option>
+</select>
+
+      <div class="form-buttons">
+        <button type="submit" class="btn-primary">
+          {{ editando !== null ? '💾 Guardar cambios' : '✅ Reservar' }}
+        </button>
+        <button type="button" class="btn-secondary" *ngIf="editando !== null"
+                (click)="editando = null; nuevaReserva={fecha:'',hora:'',lugar:''}">
+          ❌ Cancelar
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Reservas -->
+  <div class="card reservas-card">
+    <h3>{{ esAdmin ? '📋 Todas las reservas' : '📋 Mis reservas' }}</h3>
+    <div class="reservas-grid">
+      <div class="reserva-item" *ngFor="let r of reservas; let i = index">
+        <p><strong>📅 {{ r.fecha }}</strong></p>
+        <p>⏰ {{ r.hora }}</p>
+        <p>📍 {{ r.lugar }}</p>
+        <p *ngIf="esAdmin">👤 {{ r.usuario }}</p>
+        <div class="reserva-buttons">
+          <button class="btn-edit" (click)="editarReserva(i)">✏️ Editar</button>
+          <button class="btn-delete" (click)="eliminarReserva(i)">🗑 Eliminar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,126 @@
+.dashboard-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.titulo-bienvenida {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.perfil-card {
+  border-left: 5px solid #4CAF50;
+}
+
+.form-card {
+  border-left: 5px solid #2196F3;
+}
+
+.reservas-card {
+  border-left: 5px solid #FF9800;
+}
+
+.admin-badge {
+  color: #e91e63;
+  font-weight: bold;
+}
+
+.reserva-form label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.reserva-form input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.form-buttons {
+  margin-top: 15px;
+}
+
+button {
+  border: none;
+  padding: 8px 12px;
+  margin: 4px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #4CAF50;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #45a049;
+}
+
+.btn-secondary {
+  background: #9e9e9e;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: #757575;
+}
+
+.reservas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.reserva-item {
+  background: #f9f9f9;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.reserva-buttons {
+  margin-top: 10px;
+}
+
+.btn-edit {
+  background: #2196F3;
+  color: white;
+}
+
+.btn-edit:hover {
+  background: #1976D2;
+}
+
+.btn-delete {
+  background: #f44336;
+  color: white;
+}
+
+.btn-delete:hover {
+  background: #d32f2f;
+}
+
+select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background: white;
+}
+

@@ -1,0 +1,9 @@
+<nav class="navbar">
+  <a routerLink="/dashboard">🏠 Dashboard</a>
+  <a routerLink="/perfil">👤 Perfil</a>
+  <a routerLink="/reservas" *ngIf="esAdmin">📋 Reservas</a>
+
+  <span class="spacer"></span>
+
+  <button class="logout-btn" (click)="logout()">Cerrar sesión</button>
+</nav>
