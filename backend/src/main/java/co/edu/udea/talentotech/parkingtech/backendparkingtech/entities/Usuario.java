@@ -36,11 +36,11 @@ public class Usuario {
     @Column(name = "clave", nullable = false, length = 10)
     private String clave;
 
-    @OneToMany(mappedBy="Usuario")
-    private Set<Vehiculo> vehiculos;
+    // @OneToMany(mappedBy="usuario")
+    // private Set<Vehiculo> vehiculos;
 
-    @OneToMany(mappedBy = "usuario")
-    private List<Reserva> reservas;
+    // @OneToMany(mappedBy = "usuario")
+    // private List<Reserva> reservas;
 
     //Constructors
     public Usuario(){}

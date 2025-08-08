@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-BackendparkingtechApplication<backendparkingtech>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "co.edu.udea.talentotech.parkingtech.backendparkingtech.BackendparkingtechApplication",
+            "projectName": "backendparkingtech",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
